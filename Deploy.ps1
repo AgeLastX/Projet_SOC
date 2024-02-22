@@ -10,11 +10,11 @@ Rename-Item -Path $dossierDeplace -NewName "Scripts" -Force
 
 
 #ENROLEMENT
-$script1 = "C:\Scripts\enrole.ps1"
+$script1 = "C:\Scripts\enrol.ps1"
 #Logs Extract
-$script2 = "C:\Scripts\Extrac log.ps1"
+$script2 = "C:\Scripts\task_log.ps1"
 #Dump memory
-$script3 = "C:\Scripts\Script2.ps1"
+$script3 = "C:\Scripts\task_memory.ps1.ps1"
 
 Set-Location -Path "C:\Scripts"
 
