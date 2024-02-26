@@ -27,6 +27,33 @@
 
 # FILES
 
+# task_log.ps1
+This PowerShell script schedules the daily execution of a script located at "C:\Scripts\Extrac log.ps1" at 9 AM, utilizing the system's scheduled task. It first checks if a task with the name "Extraclog" already exists. If it does, no action is taken. Otherwise, the task is created with the specified parameters.
 
+**New-ScheduledTaskAction:**
+This command is used to create an action that will be executed when a scheduled task is triggered. For example, it can specify the execution of an application or a script.
 
+**New-ScheduledTaskTrigger -Daily -At 9am:**
+This command creates a trigger for a scheduled task. In this example, it configures the task to trigger daily at 9 AM.
 
+**"NT AUTHORITY\SYSTEM":**
+This represents the user under which the scheduled task will be executed. In this example, the task is configured to run under the SYSTEM account.
+
+**Get-ScheduledTask:**
+This command is used to retrieve information about scheduled tasks. In the given script, it is used to check if a task with a specific name already exists.
+
+**Register-ScheduledTask:**
+This command is used to register a new scheduled task in the system. It supports various parameters, such as the action to be performed, the trigger, the user under which it should run, the task name, etc. The -Force option can be used to replace an existing task with the same name.
+
+# task_memory.ps1
+This PowerShell script aims to schedule the execution of a script named "Memory_dump.ps1" located at "C:\Scripts" to run once at 9 AM, with a repetition every hour, over a period of 999 days.
+
+**New-ScheduledTaskTrigger -At 9am -Once -RepetitionDuration (New-TimeSpan -Days 999) -RepetitionInterval (New-TimeSpan -Hours 1)**
+
+**-At 9am :** This specifies the time at which the scheduled task should be triggered for the first time, in this case, at 9 AM.
+
+**-Once :** This indicates that the task should be triggered only once at the specified time. It does not repeat unless there are other repetition parameters.
+
+**-RepetitionDuration (New-TimeSpan -Days 999) :** This specifies the total duration of the repetition. In this example, the repetition is configured to last for 999 days.
+
+**-RepetitionInterval (New-TimeSpan -Hours 1) :** This specifies the interval between each repetition. In this example, the task will repeat every hour.
