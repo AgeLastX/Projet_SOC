@@ -25,9 +25,9 @@
 
 
 
-# FILES
+## FILES
 
-# task_log.ps1
+### task_log.ps1
 This PowerShell script schedules the daily execution of a script located at "C:\Scripts\Extrac log.ps1" at 9 AM, utilizing the system's scheduled task. It first checks if a task with the name "Extraclog" already exists. If it does, no action is taken. Otherwise, the task is created with the specified parameters.
 
 **New-ScheduledTaskAction:**
@@ -45,7 +45,7 @@ This command is used to retrieve information about scheduled tasks. In the given
 **Register-ScheduledTask:**
 This command is used to register a new scheduled task in the system. It supports various parameters, such as the action to be performed, the trigger, the user under which it should run, the task name, etc. The -Force option can be used to replace an existing task with the same name.
 
-# task_memory.ps1
+### task_memory.ps1
 This PowerShell script aims to schedule the execution of a script named "Memory_dump.ps1" located at "C:\Scripts" to run once at 9 AM, with a repetition every hour, over a period of 999 days.
 
 **New-ScheduledTaskTrigger -At 9am -Once -RepetitionDuration (New-TimeSpan -Days 999) -RepetitionInterval (New-TimeSpan -Hours 1)**
