@@ -43,7 +43,7 @@ This represents the user under which the scheduled task will be executed. In thi
 This command is used to retrieve information about scheduled tasks. In the given script, it is used to check if a task with a specific name already exists.
 
 **Register-ScheduledTask:**
-This command is used to register a new scheduled task in the system. It supports various parameters, such as the action to be performed, the trigger, the user under which it should run, the task name, etc. The -Force option can be used to replace an existing task with the same name.
+This command is used to register a new scheduled task in the system. It supports various parameters, such as the action to be performed, the trigger, the user under which it should run, the task name.
 
 ### task_memory.ps1
 This PowerShell script aims to schedule the execution of a script named "Memory_dump.ps1" located at "C:\Scripts" to run once at 9 AM, with a repetition every hour, over a period of 999 days.
