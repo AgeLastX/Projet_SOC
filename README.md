@@ -14,8 +14,6 @@
 <sub>_(If you can't find it)_ _https://www.elastic.co/guide/en/fleet/8.12/install-fleet-managed-elastic-agent.html_
 
 
-[EN COURS DE REDACTION]
-
 
 **Run the file Deploy.ps1**
 
